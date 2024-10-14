@@ -85,7 +85,7 @@ void MirageClimate::transmit_state() {
 
   // Swing
   if (this->swing_mode == climate::CLIMATE_SWING_VERTICAL || this->swing_mode == climate::CLIMATE_SWING_BOTH) {
-    remote_state[5] |= 0x1A;
+    remote_state[5] |= 2;
   }
   if (this->swing_mode == climate::CLIMATE_SWING_HORIZONTAL || this->swing_mode == climate::CLIMATE_SWING_BOTH) {
     remote_state[5] |= 1;
