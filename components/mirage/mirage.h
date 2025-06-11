@@ -20,18 +20,16 @@ class MirageClimate : public climate_ir::ClimateIR {
   }
 
   void setup() override;
-
+  
   climate::ClimateTraits traits() override;
-
+  
   void control(const climate::ClimateCall &call) override;
 
  protected:
   void transmit_state() override;
-  bool on_receive(remote_base::RemoteReceiveData data);
-
+  
   remote_transmitter::RemoteTransmitterComponent *transmitter_{nullptr};
   sensor::Sensor *sensor_{nullptr};
-  uint32_t last_transmit_time_{0};
 };
 
 }  // namespace mirage
